@@ -2,13 +2,16 @@ var JD_gitactions_ck=$prefs.valueForKey("JD_gitactions_ck");
 var JD_gitactions_jb=$prefs.valueForKey("JD_gitactions_jb");
 var git_token=$prefs.valueForKey("git_token");
 
-arr=JD_gitactions_ck.split(”,”);
-for(var i = 0; i < arr.length; i++) {
-	console.log(arr[i])
+var ck_arr=JD_gitactions_ck.split(',');
+var jb_arr=JD_gitactions_jb.split(',');
+for(var i = 0; i < ck_arr.length; i++) {
+	for(var j = 0; j < jb_arr.length; j++) {
+	async function browserForTurntableFarm2(ck_arr[i],jb_arr[j])
+}
 }
 
 async function browserForTurntableFarm2(type,type2) {
-  const method = 'POST';
+const method = 'POST';
 const headers = {
   'Accept' : 'application/vnd.github.v3+json',
   'Authorization' : 'token '+git_token
@@ -31,4 +34,4 @@ $task.fetch(myRequest).then(response => {
 });
 }
 
-
+ $done()
