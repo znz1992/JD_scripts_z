@@ -1,4 +1,4 @@
-
-console.log("打印了")
+var mas=$prefs.valueForKey("JD_gitactions_ck");
+console.log(mas)
 
 
