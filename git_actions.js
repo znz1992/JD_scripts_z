@@ -4,11 +4,19 @@ var git_token=$prefs.valueForKey("git_token");
 
 var ck_arr=JD_gitactions_ck.split(',');
 var jb_arr=JD_gitactions_jb.split(',');
-for(var i = 0; i < ck_arr.length; i++) {
-	for(var j = 0; j < jb_arr.length; j++) {
-	async function browserForTurntableFarm2(ck_arr[i],jb_arr[j])
+
+if (jb_arr[1]=='sync-scripts') {
+    for(var n = 0; n < ck_arr.length; n++) {
+			browserForTurntableFarm2(ck_arr[n],jb_arr[1])
+	}
+} else { 
+	   for(var i = 0; i < ck_arr.length; i++) {
+		for(var j = 0; j < jb_arr.length; j++) {
+			browserForTurntableFarm2(ck_arr[i],jb_arr[j])
+		}
+	}
 }
-}
+
 
 async function browserForTurntableFarm2(type,type2) {
 const method = 'POST';
